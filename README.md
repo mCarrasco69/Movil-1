@@ -8,7 +8,7 @@ Cada carpeta dentro de este repositorio representa una tarea o proyecto de la cl
 
 | Carpeta | Descripción |
 |--------|-------------|
-| `Perfil-Usuario-Información-Detallada` | Tarea: Perfil de usuario con React Native, usando props entre componentes. |
+| `semana-2/Perfil-Usuario-Información-Detallada` | Tarea: Perfil de usuario con React Native, usando props entre componentes. |
 
 ## Cómo agregar nuevas tareas
 
