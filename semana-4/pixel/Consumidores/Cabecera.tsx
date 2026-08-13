@@ -1,6 +1,7 @@
 import { View, Text, Image, TextInput, StyleSheet } from 'react-native'
 import React, { useState } from 'react'
 import { useMascota } from '../Providers/MascotaProvider'
+import perrosMascota from '../assets/perros-mascota.webp'
 
 export default function Cabecera() {
 
@@ -21,7 +22,7 @@ export default function Cabecera() {
     return (
         <View style={styles.contenedor}>
             <Image
-                source={{ uri: 'https://picsum.photos/200/200' }}
+                source={perrosMascota}
                 style={styles.imagen}
             />
             {editando ? (
@@ -38,9 +39,10 @@ export default function Cabecera() {
                     />
                 </View>
             ) : (
-                <Text style={styles.nombre} onPress={iniciarEdicion}>
-                    {nombre} ✏️
-                </Text>
+                <View style={styles.filaNombre}>
+                    <Text style={styles.nombre}>{nombre}</Text>
+                    <Text style={styles.editar} onPress={iniciarEdicion}>Editar</Text>
+                </View>
             )}
             <Text style={styles.estado}>Estado: {estadoAnimo}</Text>
             {necesitaAyuda && (
@@ -68,6 +70,12 @@ const styles = StyleSheet.create({
     filaNombre: {
         flexDirection: 'row',
         alignItems: 'center',
+    },
+    editar: {
+        fontSize: 14,
+        color: '#0066cc',
+        marginLeft: 8,
+        textDecorationLine: 'underline',
     },
     inputNombre: {
         fontSize: 20,
