@@ -1,0 +1,24 @@
+# Learn more https://docs.expo.io/guides/overview#ignoring-files
+node_modules/
+.expo/
+dist/
+web-build/
+expo-env.d.ts
+# Native
+*.orig.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+# Metro
+.metro-health-check*
+# debug
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+# macOS
+.DS_Store
+# @generated expo-cli sync-*
+expo-plugin-packages/
+# @end expo-cli sync-*
